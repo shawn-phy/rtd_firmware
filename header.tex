@@ -1,0 +1,73 @@
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{microtype}
+\graphicspath{{./images/}}
+
+% Set geometry and font size
+\usepackage[margin=0.7in]{geometry}
+\usepackage[fontsize=10pt]{scrextend}
+
+% Load xcolor before hyperref
+\usepackage{xcolor}
+
+% Configure hyperlinks with blue color
+\usepackage{hyperref}
+\hypersetup{
+    pdfauthor={Shawn Philip Oyuga},
+    pdftitle={RTD Custom Module Design Rationale},
+    pdfsubject={RTD Sensor Design Documentation},
+    pdfkeywords={RTD, Temperature Sensor, Hardware Design},
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=gray
+}
+
+% Set image resolution
+\pdfpxdimen=\dimexpr 1in/300\relax
+
+% Configure code highlighting (requires listings package)
+\usepackage{listings}
+
+% Tango-like highlighting style
+\definecolor{tangobg}{RGB}{255,255,224}
+\definecolor{tangocomment}{RGB}{78,154,6}
+\definecolor{tangostring}{RGB}{164,0,0}
+\definecolor{tangokeyword}{RGB}{32,74,135}
+
+\lstset{
+    backgroundcolor=\color{tangobg},
+    commentstyle=\color{tangocomment},
+    keywordstyle=\color{tangokeyword},
+    stringstyle=\color{tangostring},
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single
+}
+
+% Better image handling
+\usepackage{float}
+\floatplacement{figure}{H}
+\usepackage{caption}
+\captionsetup{width=0.8\textwidth, font=small}
+
+% Fix for image placement
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\floatpagefraction}{0.7}
+
+% Make section titles smaller
+\usepackage{titlesec}
+\titleformat*{\section}{\normalfont\large\bfseries}
+\titleformat*{\subsection}{\normalfont\normalsize\bfseries}
+\titleformat*{\subsubsection}{\normalfont\normalsize\bfseries}
+\titleformat*{\paragraph}{\normalfont\small\bfseries}
+
+% Make body text smaller
+\usepackage{setspace}
+\setstretch{0.9}
